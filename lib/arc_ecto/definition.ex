@@ -34,6 +34,8 @@ defmodule Arc.Ecto.Definition do
       def delete({%{file_name: file_name, updated_at: _updated_at}, scope}), do: super({file_name, scope})
 
       def delete(args), do: super(args)
+      
+      defoverridable [url: 3]
     end
   end
 end
